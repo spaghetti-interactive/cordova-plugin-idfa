@@ -14,7 +14,7 @@ import org.json.JSONObject;
 public class IdfaPlugin extends ReflectiveCordovaPlugin {
     private static final String TAG = "IdfaPlugin";
 
-    @CordovaMethod(ExecutionThread.WORKER)
+    @CordovaMethod
     protected void getInfo(CallbackContext callbackContext) throws Exception {
         Context context = this.cordova.getActivity().getApplicationContext();
         AdvertisingIdClient.Info info = AdvertisingIdClient.getAdvertisingIdInfo(context);
